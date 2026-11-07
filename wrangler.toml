@@ -1,0 +1,10 @@
+name = "sineas-hss-stream"
+pages_build_output_dir = "dist"
+compatibility_date = "2024-11-01"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+# Variabel environment publik dapat juga diset di Cloudflare Dashboard -> Settings -> Environment Variables
+NUXT_PUBLIC_SUPABASE_URL = "https://your-project-id.supabase.co"
+NUXT_PUBLIC_SUPABASE_KEY = "your-anon-public-key"
+

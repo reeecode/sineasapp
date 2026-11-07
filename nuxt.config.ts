@@ -1,0 +1,42 @@
+// https://nuxt.com/docs/api/configuration/nuxt-config
+export default defineNuxtConfig({
+  compatibilityDate: '2024-11-01',
+  devtools: { enabled: true },
+
+  modules: [
+    '@nuxtjs/tailwindcss'
+  ],
+
+  css: ['~/assets/css/main.css'],
+
+  nitro: {
+    preset: 'cloudflare-pages'
+  },
+
+  runtimeConfig: {
+    tiptipVerificationToken: process.env.TIPTIP_VERIFICATION_TOKEN || '',
+    public: {
+      supabaseUrl: process.env.NUXT_PUBLIC_SUPABASE_URL || '',
+      supabaseKey: process.env.NUXT_PUBLIC_SUPABASE_KEY || '',
+      tiptipPageUrl: process.env.NUXT_PUBLIC_TIPTIP_URL || ''
+    }
+  },
+
+  app: {
+    head: {
+      title: 'Sineas HSS Stream - Platform Pemutaran Film Komunitas Pay-as-you-wish',
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        {
+          name: 'description',
+          content: 'Platform pemutaran film eksklusif komunitas Sineas HSS dengan donasi sukarela (pay-as-you-wish) dan deteksi pembayaran otomatis realtime.'
+        },
+        { name: 'theme-color', content: '#09090b' }
+      ],
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      ]
+    }
+  }
+})
