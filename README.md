@@ -48,3 +48,4 @@ pages/
 └── admin/
     └── index.vue       # /admin -> Dashboard Admin Berbasis Akun & Role Database
 ```
+# sineasAPP
