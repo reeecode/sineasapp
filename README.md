@@ -51,3 +51,4 @@ pages/
 # sineasAPP
 # sineashssapp
 # sineasAPP
+# sineasapp
